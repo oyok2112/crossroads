@@ -11,10 +11,22 @@ Set it and forget it (nothing randomized that isn't set in stone at crossroads)
 NOT a mod
 NOT integrated into the Hades II .exe file at all
 
-Installation Instructions:
-    [SETUP TBD]
+Runs entirely on a sqlite database created at first run (imported in [crossroads.py] from [create_db.py])
 
-Runs entirely on a sqlite database created at first run
+Installation Instructions:
+    1. Install imports in pip
+    2. Run crossroads.py
+    3. Chaos
+
+--------------------------------
+Operation Instructions
+--------------------------------
+
+Commands (Case INsensitive):
+    [empty input] (enter): Randomize New Run
+    [CHRONOS]: starts timer system
+    [F+]: increase fear
+    [F-]: decrease fear
 
 Features:
     [crossroads.py]
