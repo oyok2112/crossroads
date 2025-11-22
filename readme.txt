@@ -5,6 +5,8 @@
 |_____|__|__|__|__|_____|_____|
 - for Showciety Gives Back 2025 - 
 
+    "This world is of from impulse, not of carefully crafted plans" 
+      - Chaos, Hades II
 
 Framework for randomizing a series of challenge runs (intuitive interfaces encouraged)
 Set it and forget it (nothing randomized that isn't set in stone at crossroads)
@@ -42,12 +44,11 @@ Features:
     [toula.py]
         - Optional hotkey to randomize UP/DOWN keypresses to select boons/upgrades
         - [todo] integrate into main crossroads.py
-
-"This world is of from impulse, not of carefully crafted plans" 
- - Chaos
-
-
-[TODO]
- - Idle detection (anti-stall)
- - Controller Integration
-    - Activate random choice mode (with gesture?)
+    [_logs]
+        - [crossroads_log.txt] historical log of runs
+        - [crossroads_obs.txt] status bar text that can be used as a Text (GDI+) source in OBS
+        - [next_run_obs.txt] status of fear and grasp that will be randomized next run
+    [TODO]
+        - Controller integration
+        - Idle detection (anti-stall)
+    
