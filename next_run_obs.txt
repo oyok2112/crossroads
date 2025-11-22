@@ -1,0 +1,3 @@
+Next Run:
+Fear: 10
+Grasp (Max): 30
