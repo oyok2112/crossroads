@@ -5,7 +5,7 @@
 |_____|__|__|__|__|_____|_____|
 - for Showciety Gives Back 2025 - 
 
-    "This world is of from impulse, not of carefully crafted plans" 
+    "This world is born of impulse, not of carefully crafted plans" 
       - Chaos, Hades II
 
 Framework for randomizing a series of challenge runs (intuitive interfaces encouraged)
