@@ -1,27 +1,41 @@
-Crossroads Chaos 
+           Crossroads
+ _____ _____ _____ _____ _____ 
+|     |  |  |  _  |     |   __|
+|   --|     |     |  |  |__   |
+|_____|__|__|__|__|_____|_____|
 - for Showciety Gives Back 2025 - 
 
-oyok's Hades II Challenge Run w/ Incentives
 
-Fear starts at Xh (high)
-Over time fear decreases
-Donation total delta determines extra fear reduction multiplier
+Framework for randomizing a series of challenge runs (intuitive interfaces encouraged)
+Set it and forget it (nothing randomized that isn't set in stone at crossroads)
+NOT a mod
+NOT integrated into the Hades II .exe file at all
 
-ARCANA: Randomly generated grasp, player can choose
+Installation Instructions:
+    [SETUP TBD]
+
+Runs entirely on a sqlite database created at first run
+
+Features:
+    [crossroads.py]
+        - CrossroadsDaemon randomizer engine
+        - Randomizes all Crossroads setup things:
+            - Weapon
+            - Familiar
+            - Location (Underworld or Surface)
+            - Arcana Cards/Grasp [WIP]
+            - most importantly...VOWS
+        - Vows are randomly chosen at random ranks up to a set Fear level
+        - Event Timer to change fear over time [chronos]
+    [toula.py]
+        - Optional hotkey to randomize UP/DOWN keypresses to select boons/upgrades
+        - [todo] integrate into main crossroads.py
+
+"This world is of from impulse, not of carefully crafted plans" 
+ - Chaos
 
 
-"This world is born from impulse, not from finely crafted plans" - Chaos
-2:23 in VOD 11/21
-
-TODO xRoadsXAos 11/22:
-CMD Multiplexer thing from Dave Plummer
-GITHUB!
-
-future:
- - idle detection (anti-stall) [too complx]
- - Controller integration [can't connect to damn ds4]
-    - activate random choice mode (with gesture?)
-    - BOON COLOR THINGY!!!
-- Send Blessing:
-    - Trash Redemption
-    - Send string that gets parsed into [ U, D, U, D, D, D... ] added to the next boon input queue (need to make that queue though so hold off)
+[TODO]
+ - Idle detection (anti-stall)
+ - Controller Integration
+    - Activate random choice mode (with gesture?)

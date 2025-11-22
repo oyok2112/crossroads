@@ -146,7 +146,7 @@ def randomize():
     #print("CARD SUG:\t" + card_list_string)
     print("--------------------")
 
-    with (open("crossroads_log.txt","a") as f):
+    with (open("_logs/crossroads_log.txt","a") as f):
         f.write("embrace the chaos...\n")
         f.write("--------------------\n")
         f.write(timestamp + "\n")
@@ -159,7 +159,7 @@ def randomize():
         f.write("CARDS:\t" + card_list_string + "\n")
         f.write("--------------------\n")
 
-    with (open("crossroads_obs.txt","w") as f):
+    with (open("_logs/crossroads_obs.txt","w") as f):
         f.write("Crossroads Chaos TEST for SGB2025")
         f.write("    |    Incentives: $$ Increase Fear  |  $$ Decrease Fear  |  $$ Unlock Surface  |  $$ Unlock Death Defies              ")
         f.write(location + " | " + weapon + " | " + familiar + "                    ")
@@ -301,7 +301,7 @@ def reset():
 
 def next_run():
     while True:
-        with (open("next_run_obs.txt", "w") as f):
+        with (open("_logs/next_run_obs.txt", "w") as f):
             f.write("Next Run:\nFear: " + str(max_fear) + "\nGrasp (Max): " + str(max_grasp))
         time.sleep(1)
 
