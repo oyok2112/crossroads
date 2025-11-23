@@ -81,8 +81,9 @@ class VirtualControllerRandomizer:
         print(f"\n🎲 CHAOS ENGAGED - Injecting {count} random selection(s)...")
         
         for i in range(count):
-            direction = random.choice(['up', 'down'])
-            
+            #direction = random.choice(['up', 'down'])
+            direction = 'down'
+
             # Press d-pad direction
             if direction == 'up':
                 self.gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_UP)
@@ -159,7 +160,6 @@ class VirtualControllerRandomizer:
 if __name__ == "__main__":
     print("\n🎮 Hades Menu Randomizer - Virtual Controller Edition")
     print("by oyok for SGB2025")
-    print("The ULTIMATE chaos weapon! 🌪\n")
     
     if not VGAMEPAD_AVAILABLE:
         print("\nSetup Required:")
@@ -173,9 +173,9 @@ if __name__ == "__main__":
     
     # Create randomizer
     randomizer = VirtualControllerRandomizer(
-        min_inputs=1,      # Minimum random selections
-        max_inputs=5,      # Maximum random selections  
-        input_delay=0.3,   # Delay between inputs (seconds)
+        min_inputs=10,      # Minimum random selections
+        max_inputs=50,      # Maximum random selections  
+        input_delay=0.05,   # Delay between inputs (seconds)
         hotkey='<f9>'      # Hotkey to trigger randomization
     )
     
