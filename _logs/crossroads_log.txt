@@ -960,3 +960,17 @@ embrace the chaos...
 LWF:	Underworld | Revvaal - Argent Skull | Frinos
 VOWS:	Pain + | Denial + | Forfieit + | Fangs ++ | Return ++ | Wards +CARDS:	01. The Sorceress | 02. The Wayward Son | 04. Eternity | 06. The Furies | 09. The Unseen | 11. The Swift Runner | 13. The Centaur | 16. The Enchantress | 17. The Boatman | 18. The Artificer | 20. The Queen | 21. The Fates | 23. Strength | 25. Judgement
 --------------------
+embrace the chaos...
+--------------------
+11/23 03:48:49 AM
+--------------------
+LWF:	Underworld | Zorephet - Axe | Frinos
+VOWS:	Scars ++ | Frenzy ++CARDS:	03. The Huntress | 06. The Furies | 11. The Swift Runner | 16. The Enchantress | 17. The Boatman | 19. Excellence | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/23 04:03:32 AM
+--------------------
+LWF:	Underworld | Xinth - Coat | Hecuba
+VOWS:	Grit ++ | Time +++ | Hordes ++CARDS:	02. The Wayward Son | 07. Persistence | 08. The Messenger | 09. The Unseen | 13. The Centaur | 14. Origination | 15. The Lovers | 17. The Boatman | 21. The Fates | 25. Judgement
+--------------------

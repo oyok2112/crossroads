@@ -27,8 +27,12 @@ Operation Instructions
 Commands (Case INsensitive):
     [empty input] (enter): Randomize New Run
     [CHRONOS]: starts timer system
+    [BAN thing]: Banishes (removes from pool) item based on closest matching name
+    [UBAN thing]: Un-banishes (restores to pool) item based on closest matching name
+    [O]: Lists 'overlord' - list of all items and banished flag
     [F+]: increase fear
     [F-]: decrease fear
+    [DICE.##]: Rolls ## sided di(c)e
 
 Features:
     [crossroads.py]

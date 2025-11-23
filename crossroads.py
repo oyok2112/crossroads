@@ -226,20 +226,24 @@ def banish(thing,value):
     # ------ new way
     hits = 0
     tables = []
+    fields = []
     for row in ol:
         if thing in row[1].upper():
             table = row[0]
+            field = row[1]
             tables.append(table)
+            fields.append(field)
             hits = hits + 1
     if hits > 1:
-        print("multiple table matches found...")
+        print("multiple table matches found, perhaps you misspelled the thing?")
         return
     elif hits == 0:
-        print("no table matches found...")
+        print("no table matches found, perhaps you misspelled the thing?")
         return
     else:
         table = tables[0]
-        print("table match found: " + table) 
+        field = fields[0]
+        #print("table match found: " + table + " | field: " + field) 
 
     if table == "locations":
         column = "location"
@@ -253,16 +257,20 @@ def banish(thing,value):
         column = "card"    
     
     # DEBUG
-    query = "update " + table + " set banished = " + str(value) + " where " + column + " like '%" + thing + "%'"
-    #print (query)
+    query = "update " + table + " set banished = " + str(value) + " where " + column + " = '" + field + "';"
+   #print (query)
     cur.execute(query)
     conn.commit()
     rows_affected = cur.rowcount
+    if rows_affected == 0:
+        print("no rows affected (perhaps the name was typed incorrectly?)")
+    if rows_affected > 1:
+        print("multiple rows affected (perhaps the name was typed incorrectly?)")
     if value == 1:
         print("! banished !")
     if value == 0:
         print("- unbanished -")
-    print("category: " + table.capitalize() + " | " + column + ": " + thing)
+    print("category: " + table.capitalize() + " | " + column + ": " + field)
     
     return
 
@@ -346,7 +354,7 @@ while True:
         banish(category,0)
     if sel == "O":
         spawn_overlord(disp=True)
-    if "DICE" in sel:
+    if "DICE." in sel:
         sides = sel.split(".")[1]
         dice_roll(int(sides))
     if sel == "C":
