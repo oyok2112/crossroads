@@ -897,3 +897,31 @@ embrace the chaos...
 LWF:	Underworld | Descura - Staff | Hecuba
 CARDS:	01. The Sorceress | 02. The Wayward Son | 04. Eternity | 06. The Furies | 09. The Unseen | 10. Night | 11. The Swift Runner | 13. The Centaur | 17. The Boatman | 18. The Artificer | 19. Excellence
 --------------------
+embrace the chaos...
+--------------------
+11/22 09:31:10 PM
+--------------------
+LWF:	Underworld | Xinth - Coat | Raki
+CARDS:	02. The Wayward Son | 04. Eternity | 05. The Moon | 07. Persistence | 08. The Messenger | 09. The Unseen | 10. Night | 15. The Lovers | 16. The Enchantress | 17. The Boatman | 20. The Queen | 23. Strength | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/22 09:41:37 PM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Raki
+CARDS:	01. The Sorceress | 05. The Moon | 10. Night | 14. Origination | 16. The Enchantress | 17. The Boatman | 19. Excellence | 23. Strength | 24. Divinity | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/22 09:42:02 PM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Raki
+VOWS:	Forfieit + | Hordes +++ | Pain + | Hubris ++ | Menace +CARDS:	01. The Sorceress | 03. The Huntress | 06. The Furies | 07. Persistence | 08. The Messenger | 09. The Unseen | 13. The Centaur | 17. The Boatman | 20. The Queen | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/22 10:09:12 PM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Frinos
+VOWS:	Scars + | Hordes +++ | Denial +CARDS:	05. The Moon | 16. The Enchantress
+--------------------

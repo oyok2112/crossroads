@@ -49,6 +49,7 @@ Features:
         - [crossroads_obs.txt] status bar text that can be used as a Text (GDI+) source in OBS
         - [next_run_obs.txt] status of fear and grasp that will be randomized next run
     [TODO]
+        - Weapon aspects
         - Controller integration
         - Idle detection (anti-stall)
     

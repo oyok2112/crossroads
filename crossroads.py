@@ -2,7 +2,6 @@
 #
 # future:
 #   weapon mods
-#   fear calculator
 
 
 #import psycopg2
@@ -153,7 +152,7 @@ def randomize():
         f.write("--------------------\n")
         f.write("LWF:\t" + location + " | " + weapon + " | " + familiar + "\n")
         vows = " | ".join(vows_list)
-        print("VOWS:\t" + vows)
+        f.write("VOWS:\t" + vows)
         card_list.sort()
         card_list_string = " | ".join(card_list)
         f.write("CARDS:\t" + card_list_string + "\n")
@@ -161,7 +160,7 @@ def randomize():
 
     with (open("_logs/crossroads_obs.txt","w") as f):
         f.write("Crossroads Chaos TEST for SGB2025")
-        f.write("    |    Incentives: $$ Increase Fear  |  $$ Decrease Fear  |  $$ Unlock Surface  |  $$ Unlock Death Defies              ")
+        f.write("                    ")
         f.write(location + " | " + weapon + " | " + familiar + "                    ")
         for vow in vows_list:
             f.write(vow + "    ")
