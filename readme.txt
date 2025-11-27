@@ -14,6 +14,7 @@ NOT a mod
 NOT integrated into the Hades II .exe file at all
 
 Runs entirely on a sqlite database created at first run (imported in [crossroads.py] from [create_db.py])
+To reset the entire database, just delete [crossroads.db] and it will be restored to original settings (from [create_db.py])
 
 Installation Instructions:
     1. Install imports in pip

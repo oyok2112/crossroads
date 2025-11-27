@@ -309,7 +309,7 @@ def reset():
 def next_run():
     while True:
         with (open("_logs/next_run_obs.txt", "w") as f):
-            f.write("Next Run:\nFear: " + str(max_fear) + "\nGrasp (Max): " + str(max_grasp))
+            f.write("Next Run:\nFear: " + str(max_fear))
         time.sleep(1)
 
 
@@ -319,6 +319,8 @@ starting_fear = 10
 fear_chart = [ -1, -1, -1, -1, -1, -1, -2, -2, -3 ]
 max_fear = starting_fear
 max_grasp = 30
+
+random.seed("buffalo nuggets")
 
 next_run_thread = threading.Thread(target=next_run)
 next_run_thread.start()

@@ -974,3 +974,108 @@ embrace the chaos...
 LWF:	Underworld | Xinth - Coat | Hecuba
 VOWS:	Grit ++ | Time +++ | Hordes ++CARDS:	02. The Wayward Son | 07. Persistence | 08. The Messenger | 09. The Unseen | 13. The Centaur | 14. Origination | 15. The Lovers | 17. The Boatman | 21. The Fates | 25. Judgement
 --------------------
+embrace the chaos...
+--------------------
+11/24 09:31:09 PM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Raki
+VOWS:	Time + | Forfieit + | Scars + | Menace + | Debt ++ | Wards + | Hordes +CARDS:	05. The Moon | 07. Persistence | 20. The Queen | 23. Strength | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/24 09:55:00 PM
+--------------------
+LWF:	Underworld | Lim and Oros - Blades | Hecuba
+VOWS:	Debt ++ | Shadow + | Return ++ | Menace + | Frenzy +CARDS:	04. Eternity
+--------------------
+embrace the chaos...
+--------------------
+11/24 10:10:41 PM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Raki
+VOWS:	Wards + | Grit + | Shadow + | Hubris + | Debt ++ | Fangs + | Menace +CARDS:	09. The Unseen | 17. The Boatman | 22. The Champions
+--------------------
+embrace the chaos...
+--------------------
+11/24 10:46:15 PM
+--------------------
+LWF:	Underworld | Lim and Oros - Blades | Hecuba
+VOWS:	Frenzy + | Debt + | Fangs ++ | Hubris +CARDS:	22. The Champions
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:05 AM
+--------------------
+LWF:	Underworld | Lim and Oros - Blades | Frinos
+VOWS:	Fangs ++ | Denial + | Return + | Time + | Hordes +CARDS:	03. The Huntress | 04. Eternity | 09. The Unseen | 16. The Enchantress | 17. The Boatman | 18. The Artificer | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:19 AM
+--------------------
+LWF:	Underworld | Descura - Staff | Raki
+VOWS:	Pain +++ | Fangs + | Scars ++ | Wards +CARDS:	01. The Sorceress | 07. Persistence | 09. The Unseen | 11. The Swift Runner | 18. The Artificer
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:20 AM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Frinos
+VOWS:	Hordes + | Menace + | Time + | Fangs ++ | Debt + | Return +CARDS:	01. The Sorceress | 02. The Wayward Son | 03. The Huntress | 04. Eternity | 07. Persistence | 09. The Unseen | 15. The Lovers | 16. The Enchantress | 17. The Boatman | 20. The Queen | 24. Divinity | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:21 AM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Frinos
+VOWS:	Menace ++ | Return ++ | Shadow + | Pain ++CARDS:	04. Eternity | 10. Night | 11. The Swift Runner | 17. The Boatman | 18. The Artificer | 20. The Queen | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:35 AM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Frinos
+VOWS:	Scars ++ | Hubris ++ | Grit ++ | Pain + | Denial + | Return +CARDS:	17. The Boatman | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/25 06:33:42 AM
+--------------------
+LWF:	Underworld | Xinth - Coat | Frinos
+VOWS:	Fangs ++ | Hubris ++ | Menace + | Debt ++CARDS:	07. Persistence | 14. Origination | 15. The Lovers | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/25 09:16:33 PM
+--------------------
+LWF:	Underworld | Xinth - Coat | Hecuba
+VOWS:	Forfieit + | Hubris ++ | Hordes + | Menace ++ | Wards +CARDS:	04. Eternity | 08. The Messenger | 11. The Swift Runner | 19. Excellence
+--------------------
+embrace the chaos...
+--------------------
+11/25 10:23:55 PM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Raki
+VOWS:	Return + | Fangs ++ | Grit +++ | Hordes +CARDS:	01. The Sorceress | 13. The Centaur | 17. The Boatman | 18. The Artificer | 20. The Queen | 21. The Fates | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/25 10:46:33 PM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Frinos
+VOWS:	Hubris ++ | Hordes + | Fangs + | Denial + | Return ++ | Pain +CARDS:	01. The Sorceress | 02. The Wayward Son | 03. The Huntress | 04. Eternity | 05. The Moon | 06. The Furies | 07. Persistence | 09. The Unseen | 11. The Swift Runner | 13. The Centaur | 19. Excellence | 24. Divinity | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/26 09:31:08 PM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Frinos
+VOWS:	Hubris ++ | Fangs + | Forfieit + | Debt ++ | Return ++ | Hordes ++CARDS:	02. The Wayward Son | 05. The Moon | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/26 10:06:57 PM
+--------------------
+LWF:	Surface | Zorephet - Axe | Hecuba
+VOWS:	Scars ++ | Forfieit + | Shadow + | Denial + | Time + | Return + | Hubris ++CARDS:	03. The Huntress | 04. Eternity | 11. The Swift Runner | 13. The Centaur | 17. The Boatman
+--------------------
