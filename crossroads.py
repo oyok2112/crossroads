@@ -14,6 +14,7 @@ import sqlite3
 import threading
 import time
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 class CountdownTimer:
     def __init__(self, seconds):
@@ -274,45 +275,115 @@ def banish(thing,value):
     
     return
 
-def chronos(duration, chart):
-    global max_fear
-    global e_time
-    e_time = 0.0
-    prev_mod = 0
-    fear_index = 0
-    interval = duration / len(fear_chart)
-    interval *= 60
-    print("chronos set for: " + str(len(chart)) + " intervals at " + str(interval) + " minutes each (" + str(duration) + " total minutes)")
-    print(chart)
-    potential_fear = max_fear
-    for item in chart:
-        bar = ("*" * item)
-        potential_fear = (int(item) * polarity) + potential_fear
-        if potential_fear <= 0: potential_fear = 0
-        print(bar + "\t" + str(potential_fear))
+class chronos:
+    def __init__(self, duration, chart):
+        global e_time
+        self.duration = duration
+        self.chart = chart
+        self.e_time = 0.0
+        self.prev_mod = 0
+        self.fear_index = 0
+        self.interval = int(duration) / len(self.chart)
+        self.interval *= 60
+        print("chronos set for: " + str(len(self.chart)) + " intervals at " + str(self.interval) + " minutes each (" + str(self.duration) + " total minutes)")
+        print(self.chart)
+        self.display_chart()
+        self.chronos_thread = threading.Thread(target=self.run)
+        self.chronos_thread.start()
+    
+    def run(self):
+        global max_fear
+        while True:
+            time.sleep(1)
+            self.e_time += 1
+            #print(str(e_time % interval) + " / " + str(interval))
+            mod = self.e_time % self.interval
+            if self.prev_mod > mod and max_fear > min_fear:
+                amt = self.chart[self.fear_index]
+                amt *= polarity
+                max_fear += amt
+                if max_fear > 67:
+                    max_fear = 67
+                if max_fear <= min_fear:
+                    max_fear = min_fear
+                print("fear changed to " + str(max_fear))
+                self.fear_index += 1
+                if self.fear_index > len(self.chart) - 1:
+                    self.fear_index = len(self.chart) - 1
+
+            self.prev_mod = mod
+        # unreachable, but left in for poetic reasons (you can't defeat chronos)
+        print("death to chronos...")
+
+
+    def display_chart(self, save_path="_logs/fear_chart.png"):
+        tmp_chart = self.chart[self.fear_index:len(self.chart)]
+        potential_fear = max_fear
         
-
-    while True:
-        time.sleep(1)
-        e_time += 1
-        #print(str(e_time % interval) + " / " + str(interval))
-        mod = e_time % interval
-        if prev_mod > mod and max_fear > min_fear:
-            amt = chart[fear_index]
-            amt *= polarity
-            max_fear += amt
-            if max_fear > 67:
-                max_fear = 67
-            if max_fear <= min_fear:
-                max_fear = min_fear
-            print("fear changed to " + str(max_fear))
-            fear_index += 1
-            if fear_index > len(chart) - 1:
-                fear_index = len(chart) - 1
-
-        prev_mod = mod
-    # unreachable, but left in for poetic reasons (you can't defeat chronos)
-    print("death to chronos...")
+        # Collect data for plotting
+        deltas = []
+        fear_levels = [max_fear]  # Start with current fear
+        time_points = [0]  # Start at 0 minutes
+        
+        interval_minutes = self.interval / 60  # Convert interval from seconds to minutes
+        
+        for i, item in enumerate(tmp_chart):
+            delta = int(item) * polarity
+            deltas.append(delta)
+            potential_fear = potential_fear + delta
+            if potential_fear <= 0: 
+                potential_fear = 0
+            fear_levels.append(potential_fear)
+            time_points.append((i + 1) * interval_minutes)  # Each interval in minutes
+        
+        # Set dark style
+        plt.style.use('dark_background')
+        
+        # Create the plot with dark theme colors
+        fig, ax = plt.subplots(figsize=(12, 7), facecolor='#1a1a1a')
+        ax.set_facecolor('#0d0d0d')
+        
+        # Plot the fear levels as a line with markers
+        ax.plot(time_points, fear_levels, color='#00d4ff', linewidth=3, marker='o', 
+                markersize=10, markerfacecolor='#00ff88', markeredgecolor='#ffffff', 
+                markeredgewidth=2, alpha=0.9)
+        
+        # Add fear level labels on points
+        for time, fear in zip(time_points, fear_levels):
+            ax.text(time, fear, f'{fear}', 
+                    ha='center', 
+                    va='bottom',
+                    fontweight='bold',
+                    fontsize=11,
+                    color='#ffffff',
+                    bbox=dict(boxstyle='round,pad=0.3', facecolor='#2a2a2a', edgecolor='none', alpha=0.7))
+        
+        # Stylish axes
+        ax.set_xlabel('Time Elapsed (minutes)', fontsize=12, color='#b0b0b0', fontweight='bold')
+        ax.set_ylabel('Total Fear', fontsize=12, color='#b0b0b0', fontweight='bold')
+        ax.set_title('Fear Progression Over Time', fontsize=16, color='#ffffff', fontweight='bold', pad=20)
+        
+        # Grid for that pro look
+        ax.grid(True, alpha=0.15, linestyle='--', linewidth=0.5, color='#444444')
+        ax.set_axisbelow(True)
+        
+        # Style the spines
+        for spine in ax.spines.values():
+            spine.set_color('#444444')
+            spine.set_linewidth(1)
+        
+        # Tick styling
+        ax.tick_params(colors='#888888', which='both', labelsize=10)
+        
+        # Start y-axis at 0
+        plt.ylim(bottom=0, top=max(fear_levels) + 2)
+        plt.xlim(left=0, right=max(time_points) + (interval_minutes * 0.1))  # Add slight padding
+        plt.tight_layout()
+        
+        # Save with high quality
+        plt.savefig(save_path, dpi=150, facecolor='#1a1a1a', edgecolor='none')
+        plt.close()
+        print(f"⏱ Chart saved to {save_path}")
 
 def reset():
     d = input("this will unban all things, proceed? (y/n): ")
@@ -367,8 +438,7 @@ while True:
         randomize()
     if sel == "CHRONOS":
         duration = input("enter total event time (in minutes): ")
-        chronos_thread = threading.Thread(target=chronos, args=(int(duration), fear_chart))
-        chronos_thread.start()
+        Chronos = chronos(duration, fear_chart)
     if "BAN" in sel and sel[0] != "U":
         sel_split = sel.split(" ")
         category = sel_split[1]
@@ -392,3 +462,6 @@ while True:
         print(e_time)
     if sel == "POLAR":
         polarity *= -1
+    if sel == "CHART" or sel == "LOOKATTHISGRAPH":
+        Chronos.display_chart()
+
