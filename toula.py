@@ -1,6 +1,6 @@
-# Hades Menu Randomizer - Virtual Controller Edition
-# Uses vgamepad to create a virtual Xbox controller
-# Games think this IS a real controller!
+# toula.py
+# randomizes inputs
+# sets +/- 'polarity'
 
 import time
 import random

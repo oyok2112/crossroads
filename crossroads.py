@@ -159,7 +159,7 @@ def randomize():
         f.write("--------------------\n")
 
     with (open("_logs/crossroads_obs.txt","w") as f):
-        f.write("Crossroads Chaos TEST for SGB2025")
+        f.write("Crossroads Chaos for SGB2025    - -  DONATE NOW!   www.showciety.gives     - -     trans rights are human rights     - -      ")
         f.write("                    ")
         f.write(location + " | " + weapon + " | " + familiar + "                    ")
         for vow in vows_list:
@@ -276,22 +276,42 @@ def banish(thing,value):
 
 def chronos(duration, chart):
     global max_fear
+    global e_time
+    e_time = 0.0
+    prev_mod = 0
+    fear_index = 0
     interval = duration / len(fear_chart)
+    interval *= 60
     print("chronos set for: " + str(len(chart)) + " intervals at " + str(interval) + " minutes each (" + str(duration) + " total minutes)")
     print(chart)
+    potential_fear = max_fear
+    for item in chart:
+        bar = ("*" * item)
+        potential_fear = (int(item) * polarity) + potential_fear
+        if potential_fear <= 0: potential_fear = 0
+        print(bar + "\t" + str(potential_fear))
+        
 
-    for amt in chart:
-        time.sleep(interval * 60)
-        max_fear += amt
-        if max_fear > 67:
-            max_fear = 67
-        if max_fear < 0:
-            max_fear = 0
-        sign = ""
-        if amt > 0:
-            sign = "+"
-        #print(f"Fear " + sign + str(amt) + " to " + str(max_fear))
-    
+    while True:
+        time.sleep(1)
+        e_time += 1
+        #print(str(e_time % interval) + " / " + str(interval))
+        mod = e_time % interval
+        if prev_mod > mod and max_fear > min_fear:
+            amt = chart[fear_index]
+            amt *= polarity
+            max_fear += amt
+            if max_fear > 67:
+                max_fear = 67
+            if max_fear <= min_fear:
+                max_fear = min_fear
+            print("fear changed to " + str(max_fear))
+            fear_index += 1
+            if fear_index > len(chart) - 1:
+                fear_index = len(chart) - 1
+
+        prev_mod = mod
+    # unreachable, but left in for poetic reasons (you can't defeat chronos)
     print("death to chronos...")
 
 def reset():
@@ -316,9 +336,11 @@ def next_run():
 #  -------  default values and such
 conn = db_connect()
 starting_fear = 10
-fear_chart = [ -1, -1, -1, -1, -1, -1, -2, -2, -3 ]
+fear_chart = [ 1, 1, 1, 1, 1, 1, 2, 2, 3 ]
 max_fear = starting_fear
+min_fear = 0
 max_grasp = 30
+polarity = -1
 
 random.seed("buffalo nuggets")
 
@@ -328,7 +350,8 @@ next_run_thread.start()
 os.system("CLS")
 while True:
     print("CrossroadsDaemon v0.1 by oyok for SGB2025")
-    sel = input(">:) ")
+    print(">:)")
+    sel = input()
     sel = sel.upper()
     if sel == "":
         randomize()
@@ -365,3 +388,7 @@ while True:
         quit()
     if sel == "RESET":
         reset()
+    if sel == "ET":
+        print(e_time)
+    if sel == "POLAR":
+        polarity *= -1
