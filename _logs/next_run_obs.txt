@@ -1,2 +1,2 @@
 Next Run:
-Fear: 0
+Fear: 10
