@@ -300,7 +300,7 @@ class chronos:
         self.fear_index = 0
         self.interval = int(duration) / len(self.chart)
         self.interval *= 60
-        print("chronos set for: " + str(len(self.chart)) + " intervals at " + str(self.interval) + " minutes each (" + str(self.duration) + " total minutes)")
+        print("chronos set for: " + str(len(self.chart)) + " intervals at " + str(self.interval / 60) + " minutes each (" + str(self.duration) + " total minutes)")
         print(self.chart)
         self.display_chart()
         self.chronos_thread = threading.Thread(target=self.run)
@@ -434,6 +434,11 @@ next_run_thread = threading.Thread(target=next_run)
 next_run_thread.start()
 
 os.system("CLS")
+max_fear = input("starting fear: ")
+if max_fear == "":
+    max_fear = starting_fear
+else:
+    max_fear = int(max_fear)
 while True:
     print("CrossroadsDaemon v0.1 by oyok for SGB2025")
     print(">:)")

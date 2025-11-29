@@ -1135,3 +1135,31 @@ embrace the chaos...
 LWF:	Surface | Ygnium - Flames | Hecuba
 VOWS:	Forfieit + | Denial + | Grit ++ | Return ++ | Wards +CARDS:	03. The Huntress | 06. The Furies | 07. Persistence | 11. The Swift Runner | 18. The Artificer | 19. Excellence | 21. The Fates | 22. The Champions
 --------------------
+embrace the chaos...
+--------------------
+11/29 02:06:29 PM
+--------------------
+LWF:	Surface | Xinth - Coat | Frinos
+VOWS:	Frenzy + | Debt ++ | Pain +++CARDS:	07. Persistence
+--------------------
+embrace the chaos...
+--------------------
+11/29 02:07:11 PM
+--------------------
+LWF:	Surface | Xinth - Coat | Hecuba
+VOWS:	Wards ++ | Hordes ++ | Hubris ++ | Denial + | Return ++CARDS:	02. The Wayward Son | 03. The Huntress | 05. The Moon | 06. The Furies | 08. The Messenger | 10. Night | 17. The Boatman | 18. The Artificer | 23. Strength | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/29 02:16:33 PM
+--------------------
+LWF:	Surface | Ygnium - Flames | Frinos
+VOWS:	Wards ++ | Forfieit + | Frenzy ++ | Debt + | Time + | Menace ++ | Denial + | Scars + | Hubris ++ | Fangs + | Pain +++ | Grit +++ | Hordes +CARDS:	02. The Wayward Son | 04. Eternity | 07. Persistence | 08. The Messenger | 10. Night | 11. The Swift Runner | 13. The Centaur | 14. Origination | 16. The Enchantress | 19. Excellence | 20. The Queen | 23. Strength | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/29 02:24:53 PM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Frinos
+VOWS:	Shadow + | Time +++ | Debt + | Wards ++ | Return ++ | Menace + | Frenzy + | Forfieit + | Scars ++ | Fangs ++ | Grit + | Hordes + | Hubris + | Pain +CARDS:	02. The Wayward Son | 05. The Moon | 15. The Lovers | 17. The Boatman | 19. Excellence | 21. The Fates | 25. Judgement
+--------------------
