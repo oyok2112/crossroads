@@ -105,6 +105,9 @@ class VirtualControllerRandomizer:
             
             if i < count - 1:
                 time.sleep(self.input_delay)
+                self.input_delay += (self.input_delay * 0.2)
+                if self.input_delay >= 0.75:
+                    self.input_delay = 0.75
         
         print("✓ Random selection complete!\n")
     
@@ -174,7 +177,7 @@ if __name__ == "__main__":
     # Create randomizer
     randomizer = VirtualControllerRandomizer(
         min_inputs=10,      # Minimum random selections
-        max_inputs=50,      # Maximum random selections  
+        max_inputs=20,      # Maximum random selections  
         input_delay=0.05,   # Delay between inputs (seconds)
         hotkey='<f9>'      # Hotkey to trigger randomization
     )
