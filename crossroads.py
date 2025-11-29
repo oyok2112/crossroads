@@ -165,7 +165,10 @@ def randomize():
         f.write(location + " | " + weapon + " | " + familiar + "                    ")
         for vow in vows_list:
             f.write(vow + "    ")
-        f.write("                    ")
+        quip = get_quip()
+        f.write("        ")
+        f.write("   " + quip + "   ")
+        f.write("        ")
         #i = 0
         #card_list.sort()
         #card_list_string = " ".join(card_list)
@@ -174,6 +177,18 @@ def randomize():
             #f.write(card + "  ")
             #i = i + 1
         #f.write("                    ")
+
+def get_quip():
+    quip_list = [
+        "'The task of art today is to bring chaos into order.'  -- Theodore Adorno",
+        "'Chaos is the score upon which reality is written.'  -- Henry Miller",
+        "'In the beginning there was chaos.'  -- Hesiod"
+        "'...and you know the thing about chaos? It's fair!'  -- Jonathan Nolan and Christopher Nolan, The Dark Knight"
+        "'WHO SUMMONS CHAOS? Oh, hey there, New Kid.'  -- Leopold 'Butters' Stotch, South Park"
+        "'I went down to the crossroads, fell down on my knees.  -- Eric Johnson, Crossroads"
+    ]
+
+    return random.choice(quip_list)
 
 def spawn_overlord(disp):
     cur = conn.cursor()
