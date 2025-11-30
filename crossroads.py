@@ -292,6 +292,7 @@ def banish(thing,value):
 
 class chronos:
     def __init__(self, duration, chart):
+        self.width = 1
         global e_time
         self.duration = duration
         self.chart = chart
@@ -300,12 +301,16 @@ class chronos:
         self.fear_index = 0
         self.interval = int(duration) / len(self.chart)
         self.interval *= 60
+        load = "n"
+        #load = input("load state? (y/n):")
+        if load == "Y":
+            self.load_state()
         print("chronos set for: " + str(len(self.chart)) + " intervals at " + str(self.interval / 60) + " minutes each (" + str(self.duration) + " total minutes)")
-        print(self.chart)
+        print(self.chart)        
         self.display_chart()
         self.chronos_thread = threading.Thread(target=self.run)
         self.chronos_thread.start()
-    
+
     def run(self):
         global starting_fear
         while True:
@@ -327,12 +332,45 @@ class chronos:
                     self.fear_index = len(self.chart) - 1
 
             self.prev_mod = mod
+            #self.save_state()
+            #self.display_chart()
         # unreachable, but left in for poetic reasons (you can't defeat chronos)
         print("death to chronos...")
 
 
+    def save_state(self):
+        savefile = "savestate.txt"
+        with(open(savefile, "w") as f):
+            f.write("CHRONOSAVE1.0\n")
+            f.write(str(self.e_time) + "\n")
+            f.write(str(self.duration) + "\n")
+            f.write(str(self.chart) + "\n")
+            f.write(str(self.prev_mod) + "\n")
+            f.write(str(self.fear_index) + "\n")
+            f.write(str(self.interval) + "\n")
+        #print("savestate written to " + savefile)
+        #print(" " * self.width + "*")
+        #self.width += 1
+        #self.width = self.width % 8
+
+    def load_state(self):
+        savefile = "savestate.txt"
+        with(open(savefile, "r") as f):
+            statearray = f.readlines()
+            print(statearray)
+            if statearray[0] == "CHRONOSAVE1.0\n":
+                print("SAVE STATE FILE VALID")
+                self.e_time = float(statearray[1].strip())
+                self.duration = float(statearray[2].strip())
+                self.prev_mod = float(statearray[3].strip())
+                self.fear_index = float(statearray[4].strip())
+                self.interval = float(statearray[5].strip())
+            else:
+                print("INVALID SAVE STATE FILE")
+        #print("savestate loaded from " + savefile)
+
     def display_chart(self, save_path="_logs/fear_chart.png"):
-        tmp_chart = self.chart[self.fear_index:len(self.chart)]
+        tmp_chart = self.chart[int(self.fear_index):len(self.chart)]
         potential_fear = starting_fear
         
         # Collect data for plotting
@@ -398,7 +436,7 @@ class chronos:
         # Save with high quality
         plt.savefig(save_path, dpi=150, facecolor='#1a1a1a', edgecolor='none')
         plt.close()
-        print(f"⏱ Chart saved to {save_path}")
+        print(f"📈 Chart saved to {save_path}")
 
 def reset():
     d = input("this will unban all things, proceed? (y/n): ")
@@ -421,7 +459,8 @@ def next_run():
 
 #  -------  default values and such
 conn = db_connect()
-starting_fear = 10
+default_fear = 32
+default_duration = 180
 fear_chart = [ 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 2, 2, 2, 3, 3, 1, 1, 1]
 min_fear = 0
 max_grasp = 30
@@ -434,8 +473,11 @@ next_run_thread.start()
 
 os.system("CLS")
 starting_fear = input("starting fear: ")
+duration = input("enter total event time (in minutes): ")
+if duration == "":
+    duration = default_duration
 if starting_fear == "":
-    starting_fear = starting_fear
+    starting_fear = default_fear
 else:
     starting_fear = int(starting_fear)
     
@@ -461,7 +503,6 @@ while True:
     if sel == "R":
         randomize()
     if sel == "CHRONOS":
-        duration = input("enter total event time (in minutes): ")
         Chronos = chronos(duration, fear_chart)
     if "BAN" in sel and sel[0] != "U":
         sel_split = sel.split(" ")
