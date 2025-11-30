@@ -440,6 +440,10 @@ if max_fear == "":
 else:
     max_fear = int(max_fear)
 while True:
+    if max_fear > 67:
+        max_fear = 67
+    if max_fear <= min_fear:
+        max_fear = min_fear
     print("CrossroadsDaemon v0.1 by oyok for SGB2025")
     print(">:)")
     sel = input()
@@ -454,6 +458,13 @@ while True:
     if sel == "F-":
         max_fear -= 1
         print("max fear set to " + str(max_fear))
+    if sel[0:3] == "F+P":
+        print(sel[2:])
+        val = int(sel[3:])
+        max_fear *= (int(val + 100)) / 100
+    if sel[0:3] == "F-P":
+        val = int(sel[3:])
+        max_fear *= int(val / 100)
     if sel == "R":
         randomize()
     if sel == "CHRONOS":
