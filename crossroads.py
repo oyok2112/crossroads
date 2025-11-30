@@ -110,7 +110,7 @@ def randomize():
     total_fear = 0
     vows_list = []
     check_list = []
-    while total_fear < max_fear:
+    while total_fear < starting_fear:
         #print("total fear: " + str(total_fear))
         vow_row = random.choice(vows)
         if check_list.__contains__(vow_row[0]):
@@ -122,7 +122,7 @@ def randomize():
         fear = fear[:rank]
         #print(vow + " " + str(rank) + " | " + str(sum(fear)))
         vow_fear = sum(fear)
-        if vow_fear + total_fear <= max_fear:
+        if vow_fear + total_fear <= starting_fear:
             total_fear = vow_fear + total_fear
             rank_disp = "+" * rank
             disp_string = vow + " " + rank_disp
@@ -307,21 +307,21 @@ class chronos:
         self.chronos_thread.start()
     
     def run(self):
-        global max_fear
+        global starting_fear
         while True:
             time.sleep(1)
             self.e_time += 1
             #print(str(e_time % interval) + " / " + str(interval))
             mod = self.e_time % self.interval
-            if self.prev_mod > mod and max_fear > min_fear:
+            if self.prev_mod > mod and starting_fear > min_fear:
                 amt = self.chart[self.fear_index]
                 amt *= polarity
-                max_fear += amt
-                if max_fear > 67:
-                    max_fear = 67
-                if max_fear <= min_fear:
-                    max_fear = min_fear
-                print("fear changed to " + str(max_fear))
+                starting_fear += amt
+                if starting_fear > 67:
+                    starting_fear = 67
+                if starting_fear <= min_fear:
+                    starting_fear = min_fear
+                print("fear changed to " + str(starting_fear))
                 self.fear_index += 1
                 if self.fear_index > len(self.chart) - 1:
                     self.fear_index = len(self.chart) - 1
@@ -333,11 +333,11 @@ class chronos:
 
     def display_chart(self, save_path="_logs/fear_chart.png"):
         tmp_chart = self.chart[self.fear_index:len(self.chart)]
-        potential_fear = max_fear
+        potential_fear = starting_fear
         
         # Collect data for plotting
         deltas = []
-        fear_levels = [max_fear]  # Start with current fear
+        fear_levels = [starting_fear]  # Start with current fear
         time_points = [0]  # Start at 0 minutes
         
         interval_minutes = self.interval / 60  # Convert interval from seconds to minutes
@@ -415,15 +415,14 @@ def reset():
 def next_run():
     while True:
         with (open("_logs/next_run_obs.txt", "w") as f):
-            f.write("Next Run:\nFear: " + str(max_fear))
+            f.write("Next Run:\nFear: " + str(starting_fear))
         time.sleep(1)
 
 
 #  -------  default values and such
 conn = db_connect()
 starting_fear = 10
-fear_chart = [ 1, 1, 1, 1, 1, 1, 2, 2, 3 ]
-max_fear = starting_fear
+fear_chart = [ 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 2, 2, 2, 3, 3, 1, 1, 1]
 min_fear = 0
 max_grasp = 30
 polarity = -1
@@ -434,37 +433,31 @@ next_run_thread = threading.Thread(target=next_run)
 next_run_thread.start()
 
 os.system("CLS")
-max_fear = input("starting fear: ")
-if max_fear == "":
-    max_fear = starting_fear
+starting_fear = input("starting fear: ")
+if starting_fear == "":
+    starting_fear = starting_fear
 else:
-    max_fear = int(max_fear)
+    starting_fear = int(starting_fear)
+    
 while True:
-    if max_fear > 67:
-        max_fear = 67
-    if max_fear <= min_fear:
-        max_fear = min_fear
+    if starting_fear > 67:
+        starting_fear = 67
+    if starting_fear <= min_fear:
+        starting_fear = min_fear
     print("CrossroadsDaemon v0.1 by oyok for SGB2025")
-    print(">:)")
+    print("current fear level: " + str(starting_fear) + " >:)")
     sel = input()
     sel = sel.upper()
     if sel == "":
         randomize()
-    if sel == "F":
-        print("current fear level: " + str(max_fear))
+    if sel[0:2] == "FS":
+        starting_fear = int(sel[2:])
     if sel == "F+":
-        max_fear += 1
-        print("max fear set to " + str(max_fear))
+        starting_fear += 1
+        print("max fear set to " + str(starting_fear))
     if sel == "F-":
-        max_fear -= 1
-        print("max fear set to " + str(max_fear))
-    if sel[0:3] == "F+P":
-        print(sel[2:])
-        val = int(sel[3:])
-        max_fear *= (int(val + 100)) / 100
-    if sel[0:3] == "F-P":
-        val = int(sel[3:])
-        max_fear *= int(val / 100)
+        starting_fear -= 1
+        print("max fear set to " + str(starting_fear))
     if sel == "R":
         randomize()
     if sel == "CHRONOS":
@@ -493,6 +486,6 @@ while True:
         print(e_time)
     if sel == "POLAR":
         polarity *= -1
-    if sel == "CHART" or sel == "LOOKATTHISGRAPH":
+    if sel == "DC" or sel == "LOOKATTHISGRAPH":
         Chronos.display_chart()
 
