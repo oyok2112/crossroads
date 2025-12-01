@@ -5,3 +5,87 @@ embrace the chaos...
 LWF:	Surface | Descura - Staff | Hecuba
 VOWS:	Hubris ++ | Shadow + | Menace + | Void ++ | Grit +++ | Time + | Wards ++ | Debt ++ | Rivals ++ | Hordes +++ | Scars ++ | Pain +++ | Fangs +CARDS:	01. The Sorceress | 02. The Wayward Son | 03. The Huntress | 04. Eternity | 05. The Moon | 09. The Unseen | 12. Death | 13. The Centaur | 20. The Queen | 21. The Fates | 25. Judgement
 --------------------
+embrace the chaos...
+--------------------
+11/30 02:17:14 AM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Toula
+VOWS:	Return ++ | Pain ++ | Forfeit + | Hordes +++ | Menace ++ | Void + | Frenzy ++ | Fangs ++ | Grit + | Shadow + | Time + | Denial +CARDS:	04. Eternity | 06. The Furies | 07. Persistence | 16. The Enchantress | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:20:00 AM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Toula
+VOWS:	Time + | Return + | Hubris + | Hordes ++ | Grit ++ | Void +++ | Frenzy + | Forfeit + | Pain +++ | Debt ++ | Shadow + | Menace + | Fangs ++ | Wards +CARDS:	04. Eternity | 06. The Furies | 07. Persistence | 16. The Enchantress | 17. The Boatman | 22. The Champions | 23. Strength | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:20:19 AM
+--------------------
+LWF:	Underworld | Descura - Staff | Toula
+VOWS:	Grit ++ | Return + | Time +++ | Menace ++ | Frenzy ++ | Pain +++ | Shadow + | Hubris + | Forfeit + | Void + | Wards + | Debt +CARDS:	02. The Wayward Son | 07. Persistence | 10. Night | 11. The Swift Runner | 12. Death | 15. The Lovers | 16. The Enchantress | 21. The Fates | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:20:21 AM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Raki
+VOWS:	Frenzy + | Return ++ | Denial + | Hordes ++ | Shadow + | Scars + | Debt ++ | Menace ++ | Fangs ++ | Forfeit + | Grit + | Time ++ | Pain + | Wards ++CARDS:	02. The Wayward Son | 04. Eternity | 15. The Lovers | 16. The Enchantress | 17. The Boatman | 21. The Fates | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:29:02 AM
+--------------------
+LWF:	Underworld | Lim and Oros - Blades | Hecuba
+VOWS:	Menace ++ | Hordes ++ | Shadow + | Grit ++ | Denial + | Pain ++ | Frenzy ++ | Hubris + | Forfeit + | Fangs ++ | Return + | Wards +CARDS:	05. The Moon | 07. Persistence | 16. The Enchantress | 20. The Queen | 22. The Champions | 24. Divinity
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:40:28 AM
+--------------------
+LWF:	Underworld | Zorephet - Axe | Frinos
+VOWS:	Menace ++ | Shadow + | Time +++ | Scars ++ | Grit ++ | Debt ++ | Denial + | Hordes +++ | Fangs + | Void ++ | Frenzy + | Return +CARDS:	15. The Lovers
+--------------------
+embrace the chaos...
+--------------------
+11/30 02:54:29 AM
+--------------------
+LWF:	Underworld | Revvaal - Argent Skull | Hecuba
+VOWS:	Pain +++ | Scars +++ | Forfeit + | Grit +++ | Denial + | Menace + | Shadow + | Frenzy + | Void ++ | Fangs +CARDS:	04. Eternity | 06. The Furies | 07. Persistence | 08. The Messenger | 17. The Boatman
+--------------------
+embrace the chaos...
+--------------------
+11/30 03:13:01 AM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Frinos
+VOWS:	Return ++ | Grit ++ | Forfeit + | Scars +++ | Wards + | Pain +++ | Fangs ++ | Menace + | Debt +CARDS:	01. The Sorceress | 12. Death | 13. The Centaur | 16. The Enchantress | 21. The Fates | 23. Strength
+--------------------
+embrace the chaos...
+--------------------
+11/30 03:34:15 AM
+--------------------
+LWF:	Underworld | Lim and Oros - Blades | Frinos
+VOWS:	Scars + | Hordes + | Void ++++ | Shadow + | Forfeit + | Fangs + | Pain ++CARDS:	03. The Huntress | 10. Night | 11. The Swift Runner | 16. The Enchantress | 19. Excellence | 21. The Fates
+--------------------
+embrace the chaos...
+--------------------
+11/30 03:51:21 AM
+--------------------
+LWF:	Underworld | Zorephet - Axe | Raki
+VOWS:	Forfeit + | Shadow + | Debt + | Return ++CARDS:	
+--------------------
+embrace the chaos...
+--------------------
+11/30 04:05:23 AM
+--------------------
+LWF:	Underworld | Descura - Staff | Frinos
+VOWS:	Menace + | Debt ++ | Hordes +CARDS:	07. Persistence | 10. Night | 12. Death | 16. The Enchantress | 18. The Artificer | 23. Strength | 25. Judgement
+--------------------
+embrace the chaos...
+--------------------
+11/30 04:34:28 AM
+--------------------
+LWF:	Underworld | Ygnium - Flames | Raki
+VOWS:	CARDS:	02. The Wayward Son | 11. The Swift Runner
+--------------------

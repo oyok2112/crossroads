@@ -79,7 +79,7 @@ class VirtualControllerRandomizer:
             count = random.randint(self.min_inputs, self.max_inputs)
         
         print(f"\n🎲 CHAOS ENGAGED - Injecting {count} random selection(s)...")
-        
+        input_delay=0.05
         for i in range(count):
             #direction = random.choice(['up', 'down'])
             direction = 'down'
