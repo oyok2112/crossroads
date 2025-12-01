@@ -160,7 +160,9 @@ def randomize():
         f.write("--------------------\n")
 
     with (open("_logs/crossroads_obs.txt","w") as f):
-        f.write("Crossroads Chaos for SGB2025    - -  DONATE NOW!   www.showciety.gives     - -     trans rights are human rights     - -      ")
+        # the original headline
+        # f.write("Crossroads Chaos for SGB2025    - -  DONATE NOW!   www.showciety.gives     - -     trans rights are human rights     - -      ")
+        f.write("Crossroads Chaos (Phase 2 - xMas xAos)       |        ")
         f.write("                    ")
         f.write(location + " | " + weapon + " | " + familiar + "                    ")
         for vow in vows_list:
